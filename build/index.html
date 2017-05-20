@@ -2,14 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Godown Preview</title>
-    <link rel="stylesheet" href="/static/github-markdown.css">
-    <link rel="stylesheet" href="/static/github.min.css">
+    <title>Notes</title>
+	<!-- <link rel="stylesheet" href="/static/github-markdown.css"> -->
+	<!-- <link rel="stylesheet" href="/static/github.min.css"> -->
+	<link rel="stylesheet" href="/static/modest.css"> 
+    <link rel="stylesheet" href="/static/will.css">
     <style>
       #container{width:980px;margin:0 auto;padding:45px;border:1px solid #ddd;}
     </style>
     <script src="/static/highlight.min.js"></script>
-    <script>
+	<!-- Lol.. -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+	   crossorigin="anonymous"></script>
+	<script src="/static/will.js"></script>
+	<script>
       window.onload = function() {
         var ws = new WebSocket('ws://{{.Host}}:{{.Port}}/connect?id={{.FileID}}');
         var container = document.getElementById('container');
